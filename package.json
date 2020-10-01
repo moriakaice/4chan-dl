@@ -4,7 +4,7 @@
   "description": "4chan.org image downloader",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dl": "node index.js"
   },
   "repository": {
     "type": "git",
