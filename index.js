@@ -7,6 +7,10 @@ const createDir = (path) => fs.existsSync(path) || fs.mkdirSync(path)
 
 const downloadThread = async (board, thread) => {
   createDir(`${__dirname}/dl/${board}/${thread}`)
+
+  const threadHtml = (await axios.get(`https://boards.4channel.org/${board}/thread/${thread}`)).data
+  const fileRegexp = /<a class="fileThumb" href="([^"]+)/g
+  const files = [...threadHtml.matchAll(fileRegexp)].map((match) => match.pop())
 }
 
 const run = async (board) => {
