@@ -19,5 +19,9 @@
   "homepage": "https://github.com/moriakaice/4chan-dl#readme",
   "dependencies": {
     "axios": "^0.20.0"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
   }
 }
